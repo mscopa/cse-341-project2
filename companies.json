@@ -1,0 +1,68 @@
+[
+  {
+    "_id": {
+      "$oid": "66719c8b9f1b8a3d2e7f4a23"
+    },
+    "name": "Dragon Warriors",
+    "number": 1,
+    "war_cry": "Fire and Victory!",
+    "score": 850,
+    "coins": 1250,
+    "room": "Hall A"
+  },
+  {
+    "_id": {
+      "$oid": "66719c8b9f1b8a3d2e7f4a24"
+    },
+    "name": "Phoenix Squad",
+    "number": 2,
+    "war_cry": "Rise from the ashes!",
+    "score": 720,
+    "coins": 980,
+    "room": "Hall B"
+  },
+  {
+    "_id": {
+      "$oid": "66719c8b9f1b8a3d2e7f4a25"
+    },
+    "name": "Thunder Titans",
+    "number": 3,
+    "war_cry": "Shock and awe!",
+    "score": 950,
+    "coins": 1500,
+    "room": "Hall C"
+  },
+  {
+    "_id": {
+      "$oid": "66719c8b9f1b8a3d2e7f4a26"
+    },
+    "name": "Ice Guardians",
+    "number": 4,
+    "war_cry": "Cold as ice, strong as steel!",
+    "score": 680,
+    "coins": 890,
+    "room": "Hall D"
+  },
+  {
+    "_id": {
+      "$oid": "66719c8b9f1b8a3d2e7f4a27"
+    },
+    "name": "Shadow Hunters",
+    "number": 5,
+    "war_cry": "Strike from the darkness!",
+    "score": 920,
+    "coins": 1350,
+    "room": "Hall E"
+  },
+  {
+    "_id": {
+      "$oid": "66719c8b9f1b8a3d2e7f4a28"
+    },
+    "name": "Lightning Strikers",
+    "number": 6,
+    "war_cry": "Fast and fierce!",
+    "score": 780,
+    "coins": 1100,
+    "room": "Hall F"
+  }
+]

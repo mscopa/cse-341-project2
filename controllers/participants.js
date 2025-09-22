@@ -45,26 +45,32 @@ const getSingle = async (req, res) => {
 
 const createParticipant = async (req, res) => {
     //#swagger.tags=['Participants']
-    const participant = {
-        first_name: req.body.first_name,
-        last_name: req.body.last_name,
-        birthday: req.body.birthday,
-        gender: req.body.gender,
-        email: req.body.email,
-        tshirt_size: req.body.tshirt_size,
-        approval_status: req.body.approval_status,
-        stake: req.body.stake,
-        ward: req.body.ward,
-        attended: req.body.attended,
-        bishop_email: req.body.bishop_email,
-        bishop_name: req.body.bishop_name,
-        is_member: req.body.is_member
-    };
-    const response = await mongodb.getDatabase().db('meetup').collection('participants').insertOne(participant);
-    if (response.acknowledged) {
-        res.status(204).send();
-    } else {
-        res.status(500).json(response.error || 'Some error ocurred while creating the participant.');
+    try {
+        const participant = {
+            first_name: req.body.first_name,
+            last_name: req.body.last_name,
+            birthday: req.body.birthday,
+            gender: req.body.gender,
+            email: req.body.email,
+            tshirt_size: req.body.tshirt_size,
+            approval_status: req.body.approval_status,
+            stake: req.body.stake,
+            ward: req.body.ward,
+            attended: req.body.attended,
+            bishop_email: req.body.bishop_email,
+            bishop_name: req.body.bishop_name,
+            is_member: req.body.is_member
+        };
+        const response = await mongodb.getDatabase().db('meetup').collection('participants').insertOne(participant);
+        
+        if (response.acknowledged) {
+            res.status(204).send();
+        } else {
+            res.status(500).json(response.error || 'Some error occurred while creating the participant.');
+        }
+    } catch (err) {
+        console.error('Database error:', err);
+        res.status(400).json({ message: err.message });
     }
 };
 

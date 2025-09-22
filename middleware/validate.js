@@ -29,6 +29,30 @@ const saveParticipant = (req, res, next) => {
   });
 };
 
+const saveCompany = (req, res, next) => {
+  const validationRule = {
+    name: 'required|string|max:100',
+    number: 'required|integer',
+    war_cry: 'required|string|max:200',
+    score: 'required|integer|min:0',
+    coins: 'required|integer|min:0',
+    room: 'required|string|max:50'
+  };
+  
+  validator(req.body, validationRule, {}, (err, status) => {
+    if (!status) {
+      res.status(412).send({
+        success: false,
+        message: 'Validation failed',
+        data: err
+      });
+    } else {
+      next();
+    }
+  });
+};
+
 module.exports = {
-  saveParticipant
+  saveParticipant,
+  saveCompany
 };
