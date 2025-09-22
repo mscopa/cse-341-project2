@@ -8,7 +8,6 @@
   "host": "cse-341-project2-1djs.onrender.com",
   "basePath": "/",
   "schemes": [
-    "http",
     "https"
   ],
   "paths": {
