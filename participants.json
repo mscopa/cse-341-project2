@@ -1,0 +1,146 @@
+[
+  {
+    "_id": {
+      "$oid": "66719c8b9f1b8a3d2e7f4a1b"
+    },
+    "first_name": "Juan",
+    "last_name": "Pérez",
+    "birthday": "03/03/2008",
+    "gender": "male",
+    "email": "juan.perez@email.com",
+    "tshirt_size": "L",
+    "approval_status": "approved",
+    "stake": "Center",
+    "ward": "North",
+    "attended": true,
+    "bishop_email": "obispo.norte@stake.com",
+    "bishop_name": "Carlos Rodríguez",
+    "is_member": true
+  },
+  {
+    "_id": {
+      "$oid": "66719c8b9f1b8a3d2e7f4a1c"
+    },
+    "first_name": "María",
+    "last_name": "González",
+    "birthday": "05/04/2009",
+    "gender": "female",
+    "email": "maria.gonzalez@email.com",
+    "tshirt_size": "M",
+    "approval_status": "pending",
+    "stake": "South",
+    "ward": "South 1",
+    "attended": false,
+    "bishop_email": "obispo.sur@stake.com",
+    "bishop_name": "Roberto Silva",
+    "is_member": true
+  },
+  {
+    "_id": {
+      "$oid": "66719c8b9f1b8a3d2e7f4a1d"
+    },
+    "first_name": "Pedro",
+    "last_name": "Martínez",
+    "birthday": "02/07/2011",
+    "gender": "male",
+    "email": "pedro.martinez@email.com",
+    "tshirt_size": "XL",
+    "approval_status": "rejected",
+    "stake": "East",
+    "ward": "East 2",
+    "attended": false,
+    "bishop_email": "obispo.este@stake.com",
+    "bishop_name": "Miguel Ángel López",
+    "is_member": false
+  },
+  {
+    "_id": {
+      "$oid": "66719c8b9f1b8a3d2e7f4a1e"
+    },
+    "first_name": "Emily",
+    "last_name": "Johnson",
+    "birthday": "08/12/2007",
+    "gender": "female",
+    "email": "emily.johnson@email.com",
+    "tshirt_size": "S",
+    "approval_status": "approved",
+    "stake": "West",
+    "ward": "Westview",
+    "attended": true,
+    "bishop_email": "bishop.west@stake.com",
+    "bishop_name": "David Thompson",
+    "is_member": true
+  },
+  {
+    "_id": {
+      "$oid": "66719c8b9f1b8a3d2e7f4a1f"
+    },
+    "first_name": "Michael",
+    "last_name": "Brown",
+    "birthday": "11/23/2010",
+    "gender": "male",
+    "email": "michael.brown@email.com",
+    "tshirt_size": "M",
+    "approval_status": "pending",
+    "stake": "North",
+    "ward": "Northgate",
+    "attended": false,
+    "bishop_email": "bishop.north@stake.com",
+    "bishop_name": "James Wilson",
+    "is_member": true
+  },
+  {
+    "_id": {
+      "$oid": "66719c8b9f1b8a3d2e7f4a20"
+    },
+    "first_name": "Sophia",
+    "last_name": "Davis",
+    "birthday": "04/17/2009",
+    "gender": "female",
+    "email": "sophia.davis@email.com",
+    "tshirt_size": "XS",
+    "approval_status": "approved",
+    "stake": "Central",
+    "ward": "Midtown",
+    "attended": true,
+    "bishop_email": "bishop.central@stake.com",
+    "bishop_name": "Robert Anderson",
+    "is_member": false
+  },
+  {
+    "_id": {
+      "$oid": "66719c8b9f1b8a3d2e7f4a21"
+    },
+    "first_name": "Daniel",
+    "last_name": "Wilson",
+    "birthday": "09/14/2008",
+    "gender": "male",
+    "email": "daniel.wilson@email.com",
+    "tshirt_size": "L",
+    "approval_status": "approved",
+    "stake": "Southwest",
+    "ward": "Creekside",
+    "attended": true,
+    "bishop_email": "bishop.southwest@stake.com",
+    "bishop_name": "Thomas Clark",
+    "is_member": true
+  },
+  {
+    "_id": {
+      "$oid": "66719c8b9f1b8a3d2e7f4a22"
+    },
+    "first_name": "Olivia",
+    "last_name": "Martinez",
+    "birthday": "12/03/2011",
+    "gender": "female",
+    "email": "olivia.martinez@email.com",
+    "tshirt_size": "M",
+    "approval_status": "pending",
+    "stake": "Northeast",
+    "ward": "Hillside",
+    "attended": false,
+    "bishop_email": "bishop.northeast@stake.com",
+    "bishop_name": "Jennifer Lee",
+    "is_member": false
+  }
+]
