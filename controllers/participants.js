@@ -80,27 +80,32 @@ const updateParticipant = async (req, res) => {
         res.status(400).json('Must use a valid participant id to update a participant.');
         return;
     }
-    const participantId = new ObjectId(req.params.id);
-    const participant = {
-        first_name: req.body.first_name,
-        last_name: req.body.last_name,
-        birthday: req.body.birthday,
-        gender: req.body.gender,
-        email: req.body.email,
-        tshirt_size: req.body.tshirt_size,
-        approval_status: req.body.approval_status,
-        stake: req.body.stake,
-        ward: req.body.ward,
-        attended: req.body.attended,
-        bishop_email: req.body.bishop_email,
-        bishop_name: req.body.bishop_name,
-        is_member: req.body.is_member
-    };
-    const response = await mongodb.getDatabase().db('meetup').collection('participants').replaceOne({ _id: participantId }, participant);
-    if (response.modifiedCount > 0) {
-        res.status(204).send();
-    } else {
-        res.status(500).json(response.error || 'Some error ocurred while updating the participant.');
+    try {
+        const participantId = new ObjectId(req.params.id);
+        const participant = {
+            first_name: req.body.first_name,
+            last_name: req.body.last_name,
+            birthday: req.body.birthday,
+            gender: req.body.gender,
+            email: req.body.email,
+            tshirt_size: req.body.tshirt_size,
+            approval_status: req.body.approval_status,
+            stake: req.body.stake,
+            ward: req.body.ward,
+            attended: req.body.attended,
+            bishop_email: req.body.bishop_email,
+            bishop_name: req.body.bishop_name,
+            is_member: req.body.is_member
+        };
+        const response = await mongodb.getDatabase().db('meetup').collection('participants').replaceOne({ _id: participantId }, participant);
+        if (response.modifiedCount > 0) {
+            res.status(204).send();
+        } else {
+            res.status(500).json(response.error || 'Some error ocurred while updating the participant.');
+        }
+    } catch (err) {
+        console.error('Database error:', err);
+        res.status(400).json({ message: err.message });
     }
 };
 
@@ -110,13 +115,21 @@ const deleteParticipant = async (req, res) => {
         res.status(400).json('Must use a valid participant id to delete a participant.');
         return;
     }
-    const participantId = new ObjectId(req.params.id);
-    const response = await mongodb.getDatabase().db('meetup').collection('participants').deleteOne({ _id: participantId });
-    if (response.deletedCount > 0) {
-        res.status(204).send();
-    } else {
-        res.status(500).json(response.error || 'Some error ocurred while deleting the participant.');
+
+    try {
+        
+        const participantId = new ObjectId(req.params.id);
+        const response = await mongodb.getDatabase().db('meetup').collection('participants').deleteOne({ _id: participantId });
+        if (response.deletedCount > 0) {
+            res.status(204).send();
+        } else {
+            res.status(500).json(response.error || 'Some error ocurred while deleting the participant.');
+        }
+    } catch (err) {
+        console.error('Database error:', err);
+        res.status(400).json({ message: err.message });
     }
+    
 };
 
 module.exports = {
